@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 配置po类别名  -->
+	<typeAliases>
+		<package name="cn.itcast.ssm.po"/>
+	</typeAliases>
+	
+	
+	
+	<!-- 加载映射文件  mybatis 自动扫描加载  -->
+  
+  
+</configuration>
+
+	
