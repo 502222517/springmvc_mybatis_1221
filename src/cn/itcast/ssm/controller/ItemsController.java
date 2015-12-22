@@ -6,12 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import cn.itcast.ssm.po.ItemsCustom;
 import cn.itcast.ssm.service.ItemsService;
 
 @Controller
+@RequestMapping("/items")
 public class ItemsController {
 	
 	@Autowired
@@ -28,7 +30,7 @@ public class ItemsController {
 		return modelAndView;
 	}
 	
-	@RequestMapping("/item/editItem")
+	@RequestMapping(value="/editItem",method={RequestMethod.GET,RequestMethod.POST})
 	public ModelAndView editItems() throws Exception{
 		
 		ItemsCustom itemsCustom =itemsService.findItemsById(1);
